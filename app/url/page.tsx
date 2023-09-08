@@ -10,7 +10,7 @@ export default function Url(): JSX.Element {
 
   return (
     <div className='flex flex-col justify-start items-start w-full gap-10'>
-      <ScramblePath path="../touka.png" cipherKey={97483} complexity={10} width={800} height={450} onePiece={true} />
+      <ScramblePath path="../touko.png" cipherKey={97483} complexity={10} width={800} height={450} onePiece={true} />
       <UnscramblePath path="../test2.png" cipherKey={cipherKey} complexity={complexity} width={800} height={450} onePiece={false} />
     </div>
   );
