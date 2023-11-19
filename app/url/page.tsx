@@ -9,9 +9,9 @@ export default function Url(): JSX.Element {
   const complexity = Number(process.env.NEXT_PUBLIC_COMPLEXITY);
 
   return (
-    <div className='flex flex-col justify-start items-start w-full gap-10'>
-      <ScramblePath path="../touko.png" cipherKey={97483} complexity={10} width={800} height={450} onePiece={true} />
-      <UnscramblePath path="../test2.png" cipherKey={cipherKey} complexity={complexity} width={800} height={450} onePiece={false} />
+    <div className='flex flex-col justify-center items-center w-full gap-10 my-4'>
+      <ScramblePath path="../test.jpg" cipherKey={97483} complexity={15} width={800} height={450} onePiece={true} />
+      <UnscramblePath path="../example.png" cipherKey={731263789} complexity={15} width={800} height={450} onePiece={false} />
     </div>
   );
 }
