@@ -3,7 +3,15 @@ import fs from 'fs';
 import { NextResponse } from "next/server";
 import path from 'path';
 
-export async function processImages(options) {
+interface ProcessImagesOptions {
+    pieces: string[];
+    width: number;
+    height: number;
+    folder: string;
+    filename: string;
+}
+
+export async function processImages(options: ProcessImagesOptions): Promise<NextResponse> {
     const { pieces, width, height, folder, filename } = options;
 
     if (!Array.isArray(pieces)) {

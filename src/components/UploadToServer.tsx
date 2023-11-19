@@ -1,27 +1,34 @@
 import { shuffleArray } from '../functions/shuffleArray';
-import { useEffect, useState } from 'react';
+import { ChangeEvent, useEffect, useState } from 'react';
 
+type Props = {
+    complexity: number,
+    cipherKey: number,
+    uploadPath: string,
+    fileName?: string,
+    folderName?: string,
+}
 
-export default function UploadToServer({ complexity, cipherKey, fileName, uploadPath, folderName }) {
-    const [selectedFile, setSelectedFile] = useState(null);
+export default function UploadToServer({ complexity, cipherKey, fileName, uploadPath, folderName }: Props) {
+    const [selectedFile, setSelectedFile] = useState<File | null>(null);
 
-    const [imageWidth, setImageWidth] = useState(0);
-    const [imageHeight, setImageHeight] = useState(0);
-    const [imageName, setImageName] = useState("");
+    const [imageWidth, setImageWidth] = useState<number>(0);
+    const [imageHeight, setImageHeight] = useState<number>(0);
+    const [imageName, setImageName] = useState<string>("");
 
-    const [imagePieces, setImagePieces] = useState([]);
+    const [imagePieces, setImagePieces] = useState<string[]>([]);
 
-    const handleFileChange = (e) => {
+    const handleFileChange = (e: ChangeEvent<HTMLInputElement>): void => {
         const file = e.target.files && e.target.files[0];
-        setImageName(file.name);
+        setImageName(file!.name);
         setSelectedFile(file || null);
     };
 
-    const loadImageFromFile = (file) => {
+    const loadImageFromFile = (file: File): Promise<string> => {
         return new Promise((resolve, reject) => {
             const reader = new FileReader();
             reader.onloadend = () => {
-                resolve(reader.result);
+                resolve(reader.result as string);
             };
             reader.onerror = (error) => {
                 reject(error);
@@ -79,7 +86,7 @@ export default function UploadToServer({ complexity, cipherKey, fileName, upload
     }, [selectedFile]);
 
     useEffect(() => {
-        const PostData = async (pieces) => {
+        const PostData = async (pieces: string[]) => {
             const data = {
                 pieces: pieces,
                 width: imageWidth,
