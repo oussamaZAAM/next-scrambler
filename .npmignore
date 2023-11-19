@@ -1,0 +1,6 @@
+.env
+/node_modules
+/.git
+/app
+/public
+/uploads

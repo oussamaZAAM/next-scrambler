@@ -1,7 +1,9 @@
 {
-  "name": "image-nexcrambler",
-  "version": "0.1.0",
-  "private": true,
+  "name": "nextscrambler",
+  "version": "1.0.0",
+  "private": false,
+  "author": "oussamazaam",
+  "license": "MIT",
   "scripts": {
     "dev": "next dev",
     "build": "next build",
