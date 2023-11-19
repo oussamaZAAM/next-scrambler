@@ -8,7 +8,7 @@ export default function Home(): JSX.Element {
 
   return (
     <div className="flex justify-center items-center my-8">
-      <UploadToServer complexity={complexity} cipherKey={cipherKey} uploadPath={"/api"} fileName={"test.jpg"} folderName={"uploads"} />
+      <UploadToServer complexity={complexity} cipherKey={cipherKey} uploadPath={"/api"} fileName={"test.png"} folderName={"uploads"} />
     </div>
   );
 }
