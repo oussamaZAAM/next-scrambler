@@ -1,6 +1,6 @@
 "use client";
 
-import UploadToServer from '@/components/UploadToServer';
+import UploadToServer from "@/src/components/UploadToServer";
 
 export default function Home(): JSX.Element {
   const complexity = Number(process.env.NEXT_PUBLIC_COMPLEXITY || 0);
