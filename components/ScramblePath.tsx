@@ -1,4 +1,4 @@
-import { shuffleArray } from '@/functions/shuffleArray';
+import { shuffleArray } from '../functions/shuffleArray';
 import { useEffect, useState } from 'react';
 import RenderImageFromPieces from './RenderImageFromPieces';
 import ImageSlices from './ImageSlices';

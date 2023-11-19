@@ -1,4 +1,4 @@
-import { shuffleArray } from '@/functions/shuffleArray';
+import { shuffleArray } from '../shuffleArray';
 import { Canvas, createCanvas, loadImage } from 'canvas';
 
 export async function canvasToBlob(canvas: Canvas) {

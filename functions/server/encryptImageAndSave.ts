@@ -1,4 +1,4 @@
-import { shuffleArray } from '@/functions/shuffleArray';
+import { shuffleArray } from '../shuffleArray';
 import { Canvas, createCanvas, loadImage } from 'canvas';
 import fs from 'fs';
 import path from 'path';

@@ -11,7 +11,7 @@ export function shuffleArray<T>(array: T[], key: number): T[] {
       }
   
       // Swap elements at indices i and j
-      [shuffledArray[i], shuffledArray[j]] = [shuffledArray[j], shuffledArray[i]];
+      [shuffledArray[i], shuffledArray[j]] = [shuffledArray[j]!, shuffledArray[i]!];
     }
   
     return shuffledArray;

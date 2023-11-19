@@ -4,7 +4,7 @@ export function reassembleImage<T>(imagePieces: string[]): string {
 
     if (context) {
       const pieceImage = new Image();
-      pieceImage.src = imagePieces[0];
+      pieceImage.src = imagePieces[0] ? imagePieces[0] : "";
       const pieceWidth = pieceImage.width;
       const pieceHeight = pieceImage.height;
       const gridSize = Math.sqrt(imagePieces.length);
@@ -15,7 +15,7 @@ export function reassembleImage<T>(imagePieces: string[]): string {
         const row = Math.floor(i / gridSize);
         const col = i % gridSize;
         const pieceImage = new Image();
-        pieceImage.src = imagePieces[i];
+        pieceImage.src = imagePieces[0] ? imagePieces[0] : "";
         context.drawImage(
           pieceImage,
           col * pieceWidth,

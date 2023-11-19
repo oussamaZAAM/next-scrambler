@@ -1,5 +1,5 @@
-import ImageSlices from '@/components/ImageSlices';
-import { deshuffleArray } from '@/functions/deshuffleArray';
+import ImageSlices from './ImageSlices';
+import { deshuffleArray } from '../functions/deshuffleArray';
 import { useEffect, useState } from 'react';
 import RenderImageFromPieces from './RenderImageFromPieces';
 

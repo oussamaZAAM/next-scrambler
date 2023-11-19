@@ -10,8 +10,8 @@ export default function Url(): JSX.Element {
 
   return (
     <div className='flex flex-col justify-center items-center w-full gap-10 my-4'>
-      <ScramblePath path="../test.jpg" cipherKey={cipherKey} complexity={complexity} width={800} height={450} onePiece={true} />
-      <UnscramblePath path="../test.jpg" cipherKey={cipherKey} complexity={complexity} width={800} height={450} onePiece={false} />
+      <ScramblePath path="../test.png" cipherKey={cipherKey} complexity={complexity} width={800} height={450} onePiece={true} />
+      <UnscramblePath path="../test.png" cipherKey={cipherKey} complexity={complexity} width={800} height={450} onePiece={false} />
     </div>
   );
 }

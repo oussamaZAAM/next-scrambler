@@ -1,4 +1,4 @@
-import { shuffleArray } from '@/functions/shuffleArray';
+import { shuffleArray } from '../functions/shuffleArray';
 import { ChangeEvent, useEffect, useState } from 'react';
 
 type Props = {
