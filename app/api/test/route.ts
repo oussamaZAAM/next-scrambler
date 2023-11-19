@@ -1,5 +1,5 @@
 import { NextRequest, NextResponse } from 'next/server';
-import { encryptImageAndSave } from '@/src/functions/server/encryptImageAndSave';
+import { encryptImageAndSave } from '../../../src/functions/server/encryptImageAndSave';
 
 export async function POST(request: NextRequest) {
     const formData = await request.formData();

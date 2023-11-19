@@ -1,7 +1,8 @@
 "use client";
 
-import ScramblePath from '@/src/components/ScramblePath';
-import UnscramblePath from '@/src/components/UnscramblePath';
+import ScramblePath from '../../src/components/ScramblePath';
+import UnscramblePath from '../../src/components/UnscramblePath';
+import React from "react";
 
 export default function Url(): JSX.Element {  
 

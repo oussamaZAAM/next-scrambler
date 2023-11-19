@@ -1,4 +1,4 @@
-import { processImages } from "@/src/functions/server/processImages";
+import { processImages } from "../../src/functions/server/processImages";
 import { NextRequest, NextResponse } from 'next/server';
 
 export async function POST(request: NextRequest) {

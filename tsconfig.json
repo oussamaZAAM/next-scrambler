@@ -32,12 +32,35 @@
   "compilerOptions": {
     "target": "es5",
     "module": "commonjs",
-    "jsx": "react",
-    "outDir": "./dist"
+    "jsx": "preserve",
+    "outDir": "./dist",
+    "lib": [
+      "dom",
+      "dom.iterable",
+      "esnext"
+    ],
+    "allowJs": true,
+    "skipLibCheck": true,
+    "strict": false,
+    "forceConsistentCasingInFileNames": true,
+    "noEmit": true,
+    "incremental": true,
+    "esModuleInterop": true,
+    "moduleResolution": "node",
+    "resolveJsonModule": true,
+    "isolatedModules": true,
+    "plugins": [
+      {
+        "name": "next"
+      }
+    ]
   },
   "include": [
     "src/**/*.ts",
-    "src/**/*.tsx"
+    "src/**/*.tsx",
+    ".next/types/**/*.ts",
+    "src/functions/server/processImages.js",
+    "src/components/UploadToServer.js",
   ],
   "exclude": [
     "node_modules"
