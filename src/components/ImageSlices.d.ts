@@ -7,7 +7,7 @@ interface ImageSlicesProps {
     width: number
 }
 
-declare module 'nextscrambler/src/components/ImageSlices' {
+declare module './ImageSlices' {
     const ImageSlices: React.FC<ImageSlicesProps>;
     export default ImageSlices;
 }

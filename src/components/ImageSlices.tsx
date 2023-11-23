@@ -7,7 +7,7 @@ interface ImageSlicesPageProps {
     width: number
 }
 
-const ImageSlices: React.FC<ImageSlicesPageProps> = ({ pieces, height, width }) => {
+const ImageSlices = ({ pieces, height, width }: ImageSlicesPageProps) => {
   const gridSize = Math.ceil(Math.sqrt(pieces.length));
 
   return (

@@ -100,7 +100,7 @@ export async function encryptImageAndSave(file: Blob, complexity: number, cipher
             scrambledContext.drawImage(image, x, y, aspectWidth, aspectHeight);
         });
 
-        const outputFolderPath = path.join(process.cwd(), folder);
+        const outputFolderPath = path.join(process.cwd(), "/" + folder);
         const outputFilePath = path.join(outputFolderPath, filename);
 
         // Create the output folder (if it doesn't exist)
